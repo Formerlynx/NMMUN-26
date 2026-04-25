@@ -1,10 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import { v4 as generateKey } from "uuid";
-import { motion } from "framer-motion";
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import clsx from "clsx";
 
 import { navLinks } from "@/lib/links";
-import { animationVariants } from "@/lib/animations";
+import { generateKey } from "@/lib/utils";
 import { useTime } from "@/hooks/useTime";
 
 import { Button, Logo, NavLink, NavLinkMenu, Sidebar } from ".";
@@ -15,83 +17,88 @@ const FloatingNavbar = () => {
 	const [showFloatingNav, setShowFloatingNav] = useState(false);
 
 	useEffect(() => {
-		window.addEventListener("scroll", () => {
+		const handleScroll = () => {
 			if (window.scrollY > 400) setShowFloatingNav(true);
 			else setShowFloatingNav(false);
-		});
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return (
-		showFloatingNav && (
-			<motion.nav
-				className="p py-2 md:py-1 w-screen flex justify-center z-30 fixed top-4"
-				variants={animationVariants}
-				initial="fromTop"
-				animate="visible"
-				exit="fromTop"
-				transition={{ duration: 0.4 }}
-			>
-				<div className="max-w-7xl flex items-center justify-between w-full shadow-md rounded-2xl bg-slate-50 p transition-all duration-300 py-4">
-					{/* LOGO + COUNTDOWN */}
-					<div className="flex gap-4 xl:gap-8 items-center">
-						<Link href="/">
-							<Logo w={54} h={54} />
-						</Link>
-						<TimerMini />
-					</div>
+		<AnimatePresence>
+			{showFloatingNav && (
+				<motion.nav
+					className="p py-4 w-full flex justify-center fixed top-0 left-0 z-50 glass border-b border-white/10"
+					initial={{ y: -100 }}
+					animate={{ y: 0 }}
+					exit={{ y: -100 }}
+					transition={{ duration: 0.4, ease: "circOut" }}
+				>
+					<div className="w-full max-w-7xl flex justify-between items-center gap-6 xl:gap-10">
+						{/* LOGO + COUNTDOWN */}
+						<div className="flex gap-4 xl:gap-8 items-center flex-shrink-0">
+							<Link href="/">
+								<Logo w={60} h={60} />
+							</Link>
+							<TimerMini dark boxClassName="bg-black/20" />
+						</div>
 
-					{/* LINKS - Desktop */}
-					<div className="hidden xl:flex">
-						<ul className={`flex gap-4 xl:gap-8 items-center`}>
-							{navLinks.map((link) => {
-								if (link.button) {
-									return (
-										<li key={generateKey()}>
-											<Button
-												href={link.href}
-												animation
-												disabled={isEventOver || isEventHappening}
-											>
-												{link.title}
-											</Button>
-										</li>
-									);
-								} else if (link.menu) {
-									return (
-										<li key={generateKey()}>
-											<NavLinkMenu
-												trigger={{
-													...link,
-												}}
-												content={link.children.map((child) => ({
-													title: child.title,
-													href: child.href,
-													img: {
-														src: child.icon.src,
-														alt: child.icon.alt,
-													},
-												}))}
-											/>
-										</li>
-									);
-								} else {
-									return (
-										<li key={generateKey()}>
-											<NavLink href={link.href} animation>
-												{link.title}
-											</NavLink>
-										</li>
-									);
-								}
-							})}
-						</ul>
-					</div>
+						{/* LINKS - Desktop */}
+						<div className="hidden xl:flex items-center">
+							<ul className="flex gap-4 xl:gap-6 items-center text-white">
+								{navLinks.map((link) => {
+									if (link.button) {
+										return (
+											<li key={generateKey()}>
+												<Button
+													href={link.href}
+													animation
+													dark
+													disabled={isEventOver || isEventHappening}
+												>
+													{link.title}
+												</Button>
+											</li>
+										);
+									} else if (link.menu) {
+										return (
+											<li key={generateKey()}>
+												<NavLinkMenu
+													trigger={{
+														...link,
+													}}
+													content={link.children.map((child) => ({
+														title: child.title,
+														href: child.href,
+														img: {
+															src: child.icon.src,
+															alt: child.icon.alt,
+														},
+													}))}
+													dark
+												/>
+											</li>
+										);
+									} else {
+										return (
+											<li key={generateKey()}>
+												<NavLink href={link.href} animation dark>
+													{link.title}
+												</NavLink>
+											</li>
+										);
+									}
+								})}
+							</ul>
+						</div>
 
-					{/* LINKS - Mobile - SIDEBAR TOGGLE */}
-					<Sidebar />
-				</div>
-			</motion.nav>
-		)
+						{/* LINKS - Mobile - SIDEBAR TOGGLE */}
+						<Sidebar dark />
+					</div>
+				</motion.nav>
+			)}
+		</AnimatePresence>
 	);
 };
 

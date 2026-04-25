@@ -3,25 +3,25 @@ import clsx from "clsx";
 import { Time } from "@/hooks/useTime";
 import { useEffect, useState } from "react";
 
-const TimerMini = ({ dark }: { dark?: boolean }) => {
+const TimerMini = ({ dark, boxClassName }: { dark?: boolean; boxClassName?: string }) => {
 	const [days, setDays] = useState(0);
 	const [hours, setHours] = useState(0);
 	const [minutes, setMinutes] = useState(0);
 	const [seconds, setSeconds] = useState(0);
-
+ 
 	const [isEventHappening, setIsEventHappening] = useState(false);
 	const [isEventOver, setIsEventOver] = useState(false);
-
+ 
 	useEffect(() => {
 		//? runs only on page refresh
 		const time = new Time();
-
+ 
 		if (time.difference > 0) {
 			setSeconds(time.seconds);
 			setMinutes(time.minutes);
 			setHours(time.hours);
 			setDays(time.days);
-
+ 
 			const timerInterval = setInterval(() => {
 				if (seconds > 0) {
 					setSeconds(seconds - 1);
@@ -49,11 +49,11 @@ const TimerMini = ({ dark }: { dark?: boolean }) => {
 				clearInterval(timerInterval);
 			};
 		}
-
+ 
 		setIsEventHappening(time.isEventHappening());
 		setIsEventOver(time.isEventOver());
 	}, [seconds]);
-
+ 
 	return (
 		<div className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max relative z-10">
 			{!isEventOver && (
@@ -63,7 +63,8 @@ const TimerMini = ({ dark }: { dark?: boolean }) => {
 							<div
 								className={clsx(
 									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white"
+									dark && "bg-white/10",
+									boxClassName
 								)}
 							>
 								<span
@@ -86,7 +87,8 @@ const TimerMini = ({ dark }: { dark?: boolean }) => {
 							<div
 								className={clsx(
 									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white"
+									dark && "bg-white/10",
+									boxClassName
 								)}
 							>
 								<span
@@ -109,7 +111,8 @@ const TimerMini = ({ dark }: { dark?: boolean }) => {
 							<div
 								className={clsx(
 									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white"
+									dark && "bg-white/10",
+									boxClassName
 								)}
 							>
 								<span
@@ -132,7 +135,8 @@ const TimerMini = ({ dark }: { dark?: boolean }) => {
 							<div
 								className={clsx(
 									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white"
+									dark && "bg-white/10",
+									boxClassName
 								)}
 							>
 								<span
@@ -157,7 +161,8 @@ const TimerMini = ({ dark }: { dark?: boolean }) => {
 						<div
 							className={clsx(
 								"flex py-2 px-4 bg-black bg-opacity-5 rounded-xl",
-								dark && "bg-white text-white"
+								dark && "bg-white/10 text-white",
+								boxClassName
 							)}
 						>
 							The event has started!!

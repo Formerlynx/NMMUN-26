@@ -76,7 +76,7 @@ function InfoPage() {
 			<Container id="allocations" className="pt-12">
 				<Details>
 					<Heading animation={onScrollAnimation(av.FromLeft)}>
-						Allocations
+						Allocations (TBA)
 					</Heading>
 					<Paragraph animation={onScrollAnimation(av.FromLeft)}>
 						We are happy to announce that the Delegate Allocations are now
@@ -93,23 +93,21 @@ function InfoPage() {
 						{...onScrollAnimation(av.FromLeft)}
 					>
 						<Button
-							href="https://drive.google.com/file/d/1jYIpqE064SD_bVpMxsy8D8PD1GpRth7a/view"
+							href="#"
 							className="justify-start"
 							animation
-							target="_blank"
-							
+							disabled
 						>
-							Delegate Allocations
+							TBA
 						</Button>
 
 						<Button
-							href="https://drive.google.com/file/d/1KUm4i_Mh_Hpa6SwVitRyWi5ApqMANboT/view"
+							href="#"
 							className="justify-start"
 							animation
-							target="_blank"
-							
+							disabled
 						>
-							Security and Runner Allocations
+							TBA
 						</Button>
 					</motion.div>
 				</Details>
@@ -118,7 +116,7 @@ function InfoPage() {
 			<Container id="rop" className="pt-12">
 				<Details>
 					<Heading animation={onScrollAnimation(av.FromLeft)}>
-						Rules of Procedure
+						Rules of Procedure (TBA)
 					</Heading>
 					<Paragraph animation={onScrollAnimation(av.FromLeft)}>
 						Explore the comprehensive Rules of Procedure PDF document by
@@ -133,20 +131,20 @@ function InfoPage() {
 						{...onScrollAnimation(av.FromLeft)}
 					>
 						<Button
-							href="https://drive.google.com/file/d/1Bzm2gIJgnPcLRm9m9smKHD-Jl4iHlK3D/view"
+							href="#"
 							className="mt-6 mb-12 justify-start"
 							animation
-							target="_blank"
+							disabled
 						>
-							Rules of Procedure
+							TBA
 						</Button>
 						<Button
-							href="https://docs.google.com/document/d/1-_a4YMIKyBn6ibaMVL5S_FqFeJfmt396/edit?usp=sharing&ouid=108012744093641750260&rtpof=true&sd=true"
+							href="#"
 							className="mt-6 mb-12 justify-start"
 							animation
-							target="_blank"
+							disabled
 						>
-							Crisis Rules of Procedure
+							TBA
 						</Button>
 
 					</motion.div>
@@ -167,23 +165,23 @@ function InfoPage() {
 						{...onScrollAnimation(av.FromLeft)}
 					>
 						<Button
-							href="https://drive.google.com/file/d/1-qXMKhHf4MIvsXGWw3T5fnFNqK0W3g1e/view"
+							href="#"
 							className="mt-6 mb-12 justify-start"
 							animation
-							target="_blank"
+							disabled
 						>
-							Code of Conduct
+							TBA
 						</Button>
 					</motion.div>
 				</Details>
 			</Container>
 
 			<Container id="itinerary" className="pt-12">
-				<Heading animation={onScrollAnimation(av.FromLeft)}>Itinerary</Heading>
+				<Heading animation={onScrollAnimation(av.FromLeft)}>Itinerary (TBA)</Heading>
 				<div className="flex flex-col md:flex-row gap-8 mt-6">
 					<div className="md:w-1/2 flex flex-col items-start justify-start">
 						<SubHeading className="mb-8">
-							Day 1 - Friday, 15th November, 2024
+							Day 1
 						</SubHeading>
 						<TimelineContainer>
 							{itineraryDay1.map((timeline, i) => (
@@ -210,7 +208,7 @@ function InfoPage() {
 					</div>
 					<div className="md:w-1/2 flex flex-col items-start justify-start">
 						<SubHeading className="mb-8">
-							Day 2 - Saturday, 16th November, 2024
+							Day 2
 						</SubHeading>
 						<TimelineContainer>
 							{itineraryDay2.map((timeline, i) => (
@@ -292,6 +290,7 @@ function InfoPage() {
 					opacity: 0.6,
 				}}
 				className="text-white"
+				background={<Background color="bg-[#050517]" />}
 			>
 				<Title small animation={onScrollAnimation(av.FromDown)} center>
 					SECURE YOUR SPOT

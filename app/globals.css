@@ -8,35 +8,35 @@
 
 @layer base {
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 240 10% 3.9%;
+		--background: 215 30% 98%;
+		--foreground: 215 50% 10%;
 
 		--card: 0 0% 100%;
-		--card-foreground: 240 10% 3.9%;
+		--card-foreground: 215 50% 10%;
 
 		--popover: 0 0% 100%;
-		--popover-foreground: 240 10% 3.9%;
+		--popover-foreground: 215 50% 10%;
 
-		--primary: 240 5.9% 10%;
+		--primary: 16 88% 52%;
 		--primary-foreground: 0 0% 98%;
 
-		--secondary: 240 4.8% 95.9%;
-		--secondary-foreground: 240 5.9% 10%;
+		--secondary: 130 35% 56%;
+		--secondary-foreground: 0 0% 98%;
 
-		--muted: 240 4.8% 95.9%;
-		--muted-foreground: 240 3.8% 46.1%;
+		--muted: 215 20% 92%;
+		--muted-foreground: 215 20% 40%;
 
-		--accent: 240 4.8% 95.9%;
-		--accent-foreground: 240 5.9% 10%;
+		--accent: 31 71% 68%;
+		--accent-foreground: 215 50% 10%;
 
 		--destructive: 0 84.2% 60.2%;
 		--destructive-foreground: 0 0% 98%;
 
-		--border: 240 5.9% 90%;
-		--input: 240 5.9% 90%;
-		--ring: 240 10% 3.9%;
+		--border: 215 20% 85%;
+		--input: 215 20% 85%;
+		--ring: 16 88% 52%;
 
-		--radius: 0.5rem;
+		--radius: 0.75rem;
 	}
 
 	.dark {
@@ -77,11 +77,34 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+	a {
+		color: #374151;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+	a:visited {
+		color: #374151;
+	}
+	.text-white a, .dark a, a.text-light {
+		color: #d1d5db !important;
+	}
+	.text-white a:visited, .dark a:visited {
+		color: #d1d5db !important;
+	}
+	a:hover {
+		opacity: 0.8;
+	}
 }
 
 @layer components {
 	.p {
 		@apply px-4 md:px-6 lg:px-10;
+	}
+	.glass {
+		@apply bg-white/20 backdrop-blur-md border border-white/10;
+	}
+	.glass-dark {
+		@apply bg-black/20 backdrop-blur-md border border-white/5;
 	}
 }
 
@@ -92,7 +115,7 @@ body {
 }
 
 body {
-	background: #e7dacd;
+	background: hsl(var(--background));
 	position: relative;
 	width: 100vw;
 	display: flex;
@@ -202,25 +225,26 @@ body::-webkit-scrollbar-thumb {
 
 /** Nav Link Animation */
 .nav-link-anim {
-	padding: 20px 0px;
 	position: relative;
 }
 .nav-link-anim::before {
 	transition: 300ms;
-	height: 5px;
+	height: 2px;
 	content: "";
 	position: absolute;
-	background-color: #031d44;
+	background-color: #ED561F;
 }
 .nav-link-anim-dark::before {
-	background-color: #d8d8d8;
+	background-color: #ED561F;
 }
 .nav-link-ltr::before {
 	width: 0%;
-	bottom: 10px;
+	bottom: 6px;
+	left: 24px;
+	right: 24px;
 }
 .nav-link-ltr:hover::before {
-	width: 100%;
+	width: calc(100% - 48px);
 }
 /** Nav Link Animation */
 
@@ -230,7 +254,7 @@ button.stt {
 	height: 56px;
 	overflow: hidden;
 	border: none;
-	color: #000;
+	color: #fff;
 	background: none;
 	position: relative;
 	padding-bottom: 2em;

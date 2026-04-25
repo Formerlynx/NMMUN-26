@@ -40,7 +40,7 @@ export default function NavLinkMenu({ trigger, content, dark }: Props) {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className="bg-transparent hover:bg-transparent hover:bg-opacity-0">
+					<NavigationMenuTrigger className="bg-transparent hover:bg-transparent hover:bg-opacity-0 p-0">
 						<NavLink
 							href={trigger.href}
 							className={trigger.className}
@@ -50,7 +50,7 @@ export default function NavLinkMenu({ trigger, content, dark }: Props) {
 							{trigger.title}
 						</NavLink>
 					</NavigationMenuTrigger>
-					<NavigationMenuContent className="bg-color-1">
+					<NavigationMenuContent className="bg-[#E6B076]">
 						<ul className="grid w-[500px] gap-3 p-4 grid-cols-4">
 							{content.map((element) => (
 								<li key={generateKey()}>
@@ -58,12 +58,12 @@ export default function NavLinkMenu({ trigger, content, dark }: Props) {
 										<a
 											href={element.href}
 											title={element.title}
-											className="flex flex-col items-center select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:shadow-md text-black text-opacity-60 hover:text-opacity-80"
+											className="flex flex-col items-center select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:shadow-md text-gray-700 hover:text-black"
 										>
 											<div className="w-8 h-8">
 												<img {...element.img} className="w-full h-full object-contain" />
 											</div>
-											<p className="line-clamp-2 text-sm leading-snug text-center truncate w-full">
+											<p className="line-clamp-2 text-sm leading-snug text-center truncate w-full text-gray-700 font-medium">
 												{element.title}
 											</p>
 										</a>

@@ -49,13 +49,13 @@ function ContactPage() {
 							})}
 							elements={[
 								<a
-									href="https://www.instagram.com/nmmun_24/"
+									href="https://www.instagram.com/nmmun_26/"
 									className="hover:text-primary hover:underline transition duration-300 ease-in-out flex gap-2 items-center mt-2"
 									target="_blank"
 									key={generateKey()}
 								>
 									<Instagram className="w-6 h-6" />
-									@nmmun_24
+									@nmmun_26
 								</a>,
 							]}
 						/>
@@ -75,7 +75,7 @@ function ContactPage() {
 							stagger={0.05}
 							elements={[
 								<span className="gap-2 flex items-center" key={generateKey()}>
-									<Mail className="w-6 h-6" /> nmmun2024.25@gmail.com
+									<Mail className="w-6 h-6" /> nmmun2026@gmail.com
 								</span>
 							]}
 						/>

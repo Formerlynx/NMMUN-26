@@ -59,7 +59,11 @@ function RegisterPage() {
 
 			<TableOfContent links={registerLinks} />
 
-			<Container id="payment" background={<Background color="bg-color-5" />}>
+			<Container
+				id="payment"
+				background={<Background color="bg-[#f0f9ff]" />}
+				className="text-gray-800"
+			>
 				<Details>
 					<Heading className="mb-6" animation={onScrollAnimation(av.FromLeft)}>
 						Payment Guide
@@ -190,7 +194,7 @@ function RegisterPage() {
 						<span className="underline font-bold">
 							Last Date for NMS applicants
 						</span>{" "}
-						- Closed
+						- TBA
 					</Paragraph>
 					<Paragraph
 						animation={onScrollAnimation(av.FromLeft, {
@@ -200,7 +204,7 @@ function RegisterPage() {
 						<span className="underline font-bold">
 							Last Date for non NMS applicants
 						</span>{""}
-						- Closed
+						- TBA
 					</Paragraph>
 					<Animate animation={onScrollAnimation(av.FromLeft)}>
 						<Button
@@ -209,7 +213,7 @@ function RegisterPage() {
 							animation
 							disabled
 						>
-							Applications closed
+							TBA
 						</Button>
 					</Animate>
 					<Animate animation={onScrollAnimation(av.FromLeft)}>
@@ -219,7 +223,7 @@ function RegisterPage() {
 							animation
 							disabled
 						>
-							Applications closed
+							TBA
 						</Button>
 					</Animate>
 				</Details>
@@ -290,13 +294,13 @@ function RegisterPage() {
 						<span className="underline font-bold">
 							Last Date for NMS applicants
 						</span>{" "}
-						- Closed
+						- TBA
 					</Paragraph>
 					<Paragraph animation={onScrollAnimation(av.FromLeft)}>
 						<span className="underline font-bold">
 							Last Date for non NMS applicants
 						</span>{" "}
-						- Closed
+						- TBA
 					</Paragraph>
 					<Animate animation={onScrollAnimation(av.FromLeft)}>
 						<Button
@@ -305,7 +309,7 @@ function RegisterPage() {
 							animation
 							disabled
 						>
-							Applications closed
+							TBA
 						</Button>
 					</Animate>
 				</Details>
@@ -384,7 +388,7 @@ function RegisterPage() {
 						<span className="underline font-bold">
 							Last Date for applicants
 						</span>{" "}
-						- Closed
+						- TBA
 					</Paragraph>
 					<Animate animation={onScrollAnimation(av.FromLeft)}>
 						<Button
@@ -393,7 +397,7 @@ function RegisterPage() {
 							animation
 							disabled
 						>
-							Applications closed
+							TBA
 						</Button>
 					</Animate>
 				</Details>

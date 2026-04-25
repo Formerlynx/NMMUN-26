@@ -30,20 +30,20 @@ const Navbar = ({ delay, dark }: Props) => {
 				delay
 			})}
 		>
-			<div className="w-full max-w-7xl flex justify-between">
+			<div className="w-full max-w-7xl flex justify-between items-center gap-6 xl:gap-10">
 				{/* LOGO + COUNTDOWN */}
-				<div className="flex gap-4 xl:gap-8 items-center">
+				<div className="flex gap-4 xl:gap-6 items-center flex-shrink-0">
 					<Link href="/">
-						<Logo w={64} h={64} />
+						<Logo w={60} h={60} />
 					</Link>
 					<TimerMini dark={dark} />
 				</div>
-
+ 
 				{/* LINKS - Desktop */}
-				<div className="hidden xl:flex">
+				<div className="hidden xl:flex items-center">
 					<ul
 						className={clsx(
-							"flex gap-4 xl:gap-8 items-center",
+							"flex gap-4 xl:gap-6 items-center",
 							dark && "text-white"
 						)}
 					>

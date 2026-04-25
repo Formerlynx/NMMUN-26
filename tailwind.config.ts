@@ -30,12 +30,12 @@ const config = {
 			},
 			colors: {
 				//? add your custom colors here
-				"color-1": "#e7dacd",
-				"color-2": "#cca071",
-				"color-3": "#a07a65",
-				"color-4": "#885b43",
-				"color-5": "#d4af88",
-				"color-6": "#f4dcb3",
+				"color-1": "#A3B4CC",
+				"color-2": "#E6B076",
+				"color-3": "#68B374",
+				"color-4": "#ED561F",
+				"color-5": "#050517",
+				"color-6": "#FFFFFF",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",

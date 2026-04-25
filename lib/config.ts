@@ -8,98 +8,35 @@ export const isDevelopment = () => status === "DEVELOPMENT"; //* check project s
 
 //* banner content states (banner doesn't appear unless content is there)
 export const banner: EventStates = {
-	beforeEvent: "Curious about your role in the upcoming MUN conference? Check out the Allocations page under the Information tab!",
-	duringEvent: "NMMUN 2024 has started. We wish all the very best!!",
-	afterEvent: "NMMUN 2024 is over. Thank you for joining and we hope to see you next year!!",
+	beforeEvent: "",
+	duringEvent: "",
+	afterEvent: "",
 };
 
 //* Hero text
 export const hero: EventStates = {
 	beforeEvent: "Engage, Debate, Lead: Your diplomatic journey begins here",
-	duringEvent: "NMMUN 2024 has started, we wish you all the very best!",
+	duringEvent: "NMMUN 2026 has started, we wish you all the very best!",
 	afterEvent:
-		"NMMUN 2024 is over. Thank you for joining us and we hope to see you next year!",
+		"NMMUN 2026 is over. Thank you for joining us and we hope to see you next year!",
 };
 
 //* Event timings for the timer & register button (timer only shows up before the event and register button is disabled otherwise)
-export const eventDate = "2024-11-15 08:00:00"; // YYYY-MM-DD HH-MM-SS
-export const eventEndDate = "2024-11-16 18:00:00"; //! must always be after the event
-export const eventDateInWords = "15th & 16th November, 2024";
+export const eventDate = "2026-11-13 08:00:00"; // YYYY-MM-DD HH-MM-SS
+export const eventEndDate = "2026-11-14 18:00:00"; //! must always be after the event
+export const eventDateInWords = "13th & 14th November, 2026";
 
 //* Itinerary
 export const itineraryDay1 = [
 	{
-		time: "8:00-8:45 a.m.",
-		name: "Registration",
+		time: "TBA",
+		name: "TBA",
 	},
-	{
-		time: "8:45-9:30 a.m.",
-		name: "Opening Ceremony",
-	},
-	{
-		time: "9:30-9:45 a.m.",
-		name: "Breakfast (In Council)",
-	},
-	{
-		time: "9:45-12:30 p.m.",
-		name: "Council Session One",
-	},
-	{
-		time: "12:30-2:00 p.m.",
-		name: "Lunch Break",
-	},
-	{
-		time: "2:00-4:00 p.m.",
-		name: "Council Session Two",
-	},
-	{
-		time: "4:00-4:15 p.m.",
-		name: "Snacks Break",
-	},
-	{
-		time: "4:15-5:00 p.m.",
-		name: "Council Session Three",
-	},
-	{
-		time: "End",
-	},
-
 ];
 export const itineraryDay2 = [
 	{
-		time: "8:00-10:00 a.m.",
-		name: "Council Session Four",
-	},
-	{
-		time: "10:00-10:30 a.m.",
-		name: "Breakfast (In Council)",
-	},
-	{
-		time: "10:30-12:30 p.m.",
-		name: "Council Session Five",
-	},
-	{
-		time: "12:30-2:00 p.m.",
-		name: "Lunch Break",
-	},
-	{
-		time: "2:00-3:30 p.m.",
-		name: "Council Session Six",
-	},
-	{
-		time: "3:30-3:45 p.m.",
-		name: "Snacks Break",
-	},
-	{
-		time: "3:45-4:45 p.m.",
-		name: "Council Session Seven",
-	},
-	{
-		time: "4:45-6:00 p.m.",
-		name: "Closing Ceremony",
-	},
-	{
-		time: "End",
+		time: "TBA",
+		name: "TBA",
 	},
 ];
 

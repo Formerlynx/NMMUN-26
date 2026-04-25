@@ -5,6 +5,7 @@ import CTA from "./CTA";
 import FloatingNavbar from "./FloatingNavbar";
 import FloatingScrollToTopButton from "./FloatingScrollToTopButton";
 import Footer from "./Footer";
+import LoadingScreen from "./LoadingScreen";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import NavLink from "./NavLink";
@@ -27,5 +28,6 @@ export {
 	NavLinkMenu,
 	ScrollToTopButton,
 	Sidebar,
-	TableOfContent
+	TableOfContent,
+	LoadingScreen,
 };

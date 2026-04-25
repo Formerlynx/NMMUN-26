@@ -7,6 +7,7 @@ import {
 	ScrollToTopButton,
 	FloatingNavbar,
 	FloatingScrollToTopButton,
+	LoadingScreen,
 } from "../navigation";
 
 interface Props {
@@ -21,8 +22,9 @@ interface Props {
 const BaseLayout = ({ children, noScrollToTop, navbar }: Props) => {
 	return (
 		<AnimationWrapper>
+			<LoadingScreen />
 			<NextTopLoader
-				color="#e2d1ca"
+				color="#ED561F"
 				initialPosition={0.08}
 				crawlSpeed={200}
 				height={3}
@@ -30,7 +32,7 @@ const BaseLayout = ({ children, noScrollToTop, navbar }: Props) => {
 				showSpinner={false}
 				easing="ease"
 				speed={200}
-				shadow="inset 20px 20px 60px #c0b2ac, inset -20px -20px 60px #fff0e8"
+				shadow="0 0 10px #ED561F,0 0 5px #ED561F"
 			/>
 			<Banner />
 			<main className="w-full relative">

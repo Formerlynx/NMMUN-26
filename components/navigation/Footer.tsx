@@ -52,19 +52,19 @@ const Footer = ({ className }: { className?: string }) => {
 
 				<div className="sm:flex sm:items-center sm:justify-between">
 					<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-						© 2024 NMMUN™. All Rights Reserved.
+						© 2026 NMMUN™. All Rights Reserved.
 					</span>
 
 					<div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
 						<a
-							href="https://www.instagram.com/nmmun_24/"
+							href="https://www.instagram.com/nmmun_26/"
 							className="text-gray-300 hover:text-white"
 						>
 							<Instagram className="w-6 h-6" />
 							<span className="sr-only">Instagram Page</span>
 						</a>
 						<a
-							href="mailto:nmmun2024.25@gmail.com"
+							href="mailto:nmmun2026@gmail.com"
 							className="text-gray-300 hover:text-white"
 						>
 							<Mail className="w-6 h-6" />

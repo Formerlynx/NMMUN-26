@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -37,15 +38,18 @@ const HeroCarousel = ({
 	return (
 		<Carousel
 			plugins={[plugin.current]}
-			className={clsx("w-full h-screen bg-black relative", className)}
+			className={clsx("w-full h-screen bg-black relative overflow-hidden", className)}
 		>
 			<CarouselContent>
 				{images.map((img) => (
 					<CarouselItem key={generateKey()}>
-						<img
+						<motion.img
 							{...img}
 							className="object-cover w-full h-screen"
 							style={{ opacity }}
+							initial={{ scale: 1.2 }}
+							animate={{ scale: 1 }}
+							transition={{ duration: 5, ease: "easeOut" }}
 						/>
 					</CarouselItem>
 				))}

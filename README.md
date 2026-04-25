@@ -1,6 +1,6 @@
-# NMMUN — New Millennium Model United Nations 2024-25
+# NMMUN — New Millennium Model United Nations 2026-27
 
-Explore the world of diplomacy and global affairs with the New Millennium Model United Nations Conference. This site presents the 2024-2025 event: councils, schedules, registration guidance, and team profiles, built with Next.js for a smooth, animated, and SEO-aware experience.
+Explore the world of diplomacy and global affairs with the New Millennium Model United Nations Conference. This site presents the 2026-2027 event: councils, schedules, registration guidance, and team profiles, built with Next.js for a smooth, animated, and SEO-aware experience.
 
 ## What it does
 - Publishes event information, dress code, itineraries, and rules of procedure.

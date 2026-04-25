@@ -3,6 +3,7 @@ import clsx from "clsx";
 
 interface Props extends BaseComponentProps {
 	children: React.ReactNode;
+	sectionClassName?: string;
 	image: {
 		src: string;
 		alt: string;
@@ -14,11 +15,12 @@ interface Props extends BaseComponentProps {
 function HeroMini({
 	children,
 	className,
+	sectionClassName,
 	image: { src, alt, opacity, className: imgClassName },
 }: Props) {
 	return (
-		<section className="w-full flex justify-center p">
-			<div className="max-w-7xl w-full py-28 md:py-20 relative rounded-2xl overflow-hidden bg-black shadow-xl">
+		<section className={clsx("w-full flex justify-center p", sectionClassName)}>
+			<div className={clsx("max-w-7xl w-full py-28 md:py-20 relative rounded-2xl overflow-hidden shadow-xl bg-black", className?.includes('bg-') && "bg-transparent")}>
 				<img
 					src={src}
 					alt={alt}
