@@ -87,12 +87,6 @@ Open http://localhost:3000 after `npm run dev`.
 ## Project status / Roadmap
 - See `TODO.md` for tracked items. Pending items include: flipping `NEXT_PUBLIC_STATUS` to production when ready, font weight specification, color refinements, JS docs, consolidating shared classnames, and centralizing more data/config.
 
-## Credits / Contributors
-- Originally built by @Clupai8o0 and team; maintained for NMMUN 2024-2025.
-- Contact channels: Instagram `@nmmun_24`, email `nmmun2024.25@gmail.com`, bug reports via https://github.com/Shawarma22/nmmun.
-- NMMUN'24 Head of IT: Hiranya Bansal.  
-  NMMUN'23 Head of IT: Samridh Limbu — [GitHub](https://github.com/Clupai8o0) · [Instagram](https://instagram.com/clupai8o0) · Email: limbusamaka@icloud.com.
-
 ## Additional resources
 - [TypeScript](https://www.typescriptlang.org/docs/) · [React.js](https://react.dev/) · [Next.js](https://nextjs.org)
 - UI components: [shadcn/ui](https://ui.shadcn.com/) · [Tailwind](https://tailwindcss.com/)
