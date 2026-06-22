@@ -70,13 +70,13 @@ function GalleryPage() {
 			<div className="my-20"></div>
 
 			<HeroMini
-				image={{
-					src: "/hero/hero-mini.jpeg",
-					alt: "whatever",
-					opacity: 0.6,
+    			image={{
+	        		src: "...",
+		    	    alt: "...",
+			        opacity: 0.6,
 				}}
-				className="text-white"
-				background={<Background color="bg-[#050517]" />}
+	    		sectionClassName="bg-[#050517] py-10"
+			    className="text-white bg-transparent"
 			>
 				<Title small animation={onScrollAnimation("fromDown")} center>
 					SECURE YOUR SPOT

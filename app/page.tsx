@@ -57,7 +57,7 @@ export default function Home() {
 						delay: 2.5,
 					})}
 				>
-					2025-26
+					2026-27
 				</Lead>
 				<Paragraph
 					animation={animation(AnimationVariants.FromDown, {
@@ -128,6 +128,16 @@ export default function Home() {
 					>
 						Theme of NMMUN&apos;26 TBD
 					</Heading>
+
+					<Paragraph
+						animation={onScrollAnimation(AnimationVariants.FromLeft, {
+							opacity: 0.8,
+						})}
+					>
+						Your theme description goes here. Add the explanation of the NMMUN&apos;26
+						theme, its significance, and what delegates can expect during the
+						conference.
+					</Paragraph>
 				</Details>
 			</Container>
 
