@@ -75,7 +75,7 @@ function ContactPage() {
 							stagger={0.05}
 							elements={[
 								<span className="gap-2 flex items-center" key={generateKey()}>
-									<Mail className="w-6 h-6" /> NMMUN'26 Email
+									<Mail className="w-6 h-6" /> NMMUN&apos;26 Email
 								</span>
 							]}
 						/>
