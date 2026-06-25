@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import { homeMetaData } from "@/lib/metadata";
 export const metadata = homeMetaData;
 
