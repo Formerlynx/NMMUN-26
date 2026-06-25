@@ -38,6 +38,10 @@ export const itineraryDay2 = [
 		time: "TBA",
 		name: "TBA",
 	},
+	{
+		time: "TBA",
+		name: "TBA",
+	},
 ];
 
 //* Dress code

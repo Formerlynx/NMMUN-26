@@ -18,13 +18,13 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Addressing the threat of Cyber warfare and ensuring international cyber security.",
-			"Maintaining failsafe and contingencies for nuclear, chemical or biochemical attacks.",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/186YqKsN-mJmp2vOIMeI7AW7IPOUmNHCp/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -39,26 +39,26 @@ export const councils: CouncilLink[] = [
 		],
 	},
 	{
-		title: "UNCSTD",
-		id: "cstd",
+		title: "UNOOSA",
+		id: "oosa",
 		desc: [
-			"The United Nations Commission on Science and Technology for Development (CSTD) is a key body within the UN, tasked with guiding the international community in harnessing science and technology to foster sustainable development. ", 
-			"As a MUN council, the CSTD provides delegates with a unique platform to explore the intersection of innovation, technology, and development, addressing critical issues that affect both developed and developing nations. ",
+			"The United Nations Office for Outer Space Affairs (OOSA) is a key body within the UN, tasked with promoting the peaceful use of outer space and coordinating international cooperation in space activities. ", 
+			"As a MUN council, the OOSA provides delegates with a unique platform to explore the intersection of space exploration, technology, and international law, addressing critical issues that affect both developed and developing nations. ",
 			"This council is a beginner council and ideal for those who are new to MUNs or debating.",
 		],
-		href: "/council/cstd",
+		href: "/council/oosa",
 		icon: {
-			src: "/councils/cstd.png",
+			src: "/councils/oosa.png",
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Promoting digital inclusion and bridging the digital divide in developing countries",
-			"Balancing privacy and security in the era of digital surveillance.",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1VFsanNnhsUTmv2DWrxAutXHBRjM4TcT-/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -86,13 +86,13 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Freedom of Speech vs Hate Speech, defining the boundaries and protecting human dignity.",
-			"Securing sanctuary: Upholding the rights of displace populations in an era of global upheaval.",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://docs.google.com/document/d/1QmrYxT4A0o4f0E2tVQSaWjLI9CFcTIdY/edit?usp=drive_link&ouid=108012744093641750260&rtpof=true&sd=true",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -120,13 +120,13 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"The Grass is Greener: Reconciling Cannabis legalisation with international drug control framework",
-			"Connecting the dots: Addressing the intersections, between organized crime, corruption and human trafficking",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1Lgji_fFg0zPkEiJRfybgDjUbkk9OACh9/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -154,18 +154,18 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Investor state dispute settlement mechanisms: Evaluating the Legitimacy and National Sovereignty.",
-			"Addressing the Global Debt Crisis.",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
-				title: "Topic 1 Background Guide",
-				url: "https://drive.google.com/file/d/1GHvsRlR_BmKyfKN_Ni5RtpZ8QzzwY7e-/view",
+				title: "Background Guide",
+				url: "TBR",
 			},
-			{
-				title: "Topic 2 Background Guide",
-				url: "https://drive.google.com/file/d/19x-qcC3uG8_7cQLfc_0bRTXEdNC417y3/view",
-			},
+			//{
+			//	title: "Topic 2 Background Guide",
+			//	url: "https://drive.google.com/file/d/19x-qcC3uG8_7cQLfc_0bRTXEdNC417y3/view",
+			//},
 		],
 		members: [
 			{
@@ -192,12 +192,12 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations environment programs Logo",
 		},
 		topics: [
-			"Shaping a Sustainable Future: Youth Voices in the Global Environment Agenda.",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1ykbhOBLw7LgAeaH69hKyBWjAJ-8k8_Wp/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -212,26 +212,26 @@ export const councils: CouncilLink[] = [
 		],
 	},
 	{
-		title: "WHO",
-		id: "who",
+		title: "UNICEF",
+		id: "icef",
 		desc: [
-			"The World Health Organization (WHO) is a specialized agency of the United Nations responsible for international public health. The WHO's mission is to promote health, keep the world safe, and serve the vulnerable by addressing global health challenges. ", 
-			"As a MUN council, the WHO provides delegates with a platform to tackle pressing health issues, develop policies to improve global health, and coordinate international responses to health emergencies. ",
+			"The United Nations International Children's Emergency Fund (UNICEF) is a United Nations agency responsible for providing humanitarian and developmental aid to children and mothers in developing countries. ", 
+			"As a MUN council, UNICEF provides delegates with a platform to address pressing issues related to child welfare, education, and healthcare, developing policies to improve the lives of children worldwide. ",
 			"This council is a beginner council and ideal for those who are new to MUNs or debating.",
 		],
-		href: "/council/who",
+		href: "/council/icef",
 		icon: {
-			src: "/councils/who.png",
+			src: "/councils/icef.png",
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Balancing public health and personal freedom, navigating the ethical dilemma of mandatory vaccination policies.",
-			"Providing Healthcare to war-torn countries or countries during war.",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1Zb5X5iYuQ7574wuBHaJGJJeSH0soEnrE/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -259,12 +259,12 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Republic of the Congo vs Belgium Republic of the Congo vs Belgium",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1Xo3hE3HMX-vsgf66bvM8aBwYz_gLIr5L/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -292,13 +292,13 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Auctioning",
-			"Addressing the problems of racism, sexual abuse and discrimination in football.",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1GC9H_qp_7nUat4OskswdTiCywarMe0Yw/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -326,13 +326,13 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations commission on the status of women Logo",
 		},
 		topics: [
-			"Empowering women in STEM.",
-			"Cultural relativism vs Universal woman’s rights: Respecting traditions or upholding human rights?",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1rPZAe3oA60U4pjoejYEjIRjAaLp0PRY3/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -360,12 +360,12 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Chernobyl",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide",
-				url: "https://drive.google.com/file/d/1lEdpxNPZtq3cJbqr5hjTXfI5fZRDUdGh/view",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -393,13 +393,13 @@ export const councils: CouncilLink[] = [
 			alt: "lok sabha Logo" 
 		},
 		topics: [
-			"Rewriting the rules, modernizing India’s electoral landscape",
-			"Uniform Civil Code",
+			"TBA",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide in the works",
-				url: "#",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -423,17 +423,17 @@ export const councils: CouncilLink[] = [
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Russia-Ukraine Crisis",
+			"TBA",
 		],
 		bgs: [
 			{
-				title: "Russian side Background Guide",
-				url: "https://drive.google.com/file/d/1Noe6tZJw3rdkAmrP7vqdRJCh6vPurywj/view",
+				title: "Background Guide",
+				url: "TBR",
 			},
-			{
-				title: "Ukraine side Background Guide",
-				url: "https://drive.google.com/file/d/1kaEuRbhFzs_-MRz2jEkGWLkjmAddc67e/view",
-			},
+			//{
+			//	title: "Ukraine side Background Guide",
+			//	url: "TBR",
+			//},
 		],
 		members: [
 			{
@@ -455,25 +455,25 @@ export const councils: CouncilLink[] = [
 		],
 	},
 	{
-		title: "Suits",
-		id: "suits",
+		title: "IMO",
+		id: "imo",
 		desc: [
-			"It is a fictional MUN council inspired by the television series 'Suits.' ", 
-			"This council simulates the high-stakes, dramatic world of corporate law, where delegates take on roles as top attorneys, clients, and judges navigating complex legal cases, negotiations, and corporate disputes. The council combines elements of legal strategy, courtroom drama, and corporate intrigue to create an engaging and dynamic simulation. ",
-			"This council is an advanced council with it's own specialized procedures and special gimmicks, those picking this should be well versed with MUNs and debating.",
+			"The International Maritime Organization (IMO) is the United Nations agency responsible for regulating international shipping, promoting maritime safety, security, and environmental protection.", 
+			"IMO is a specialized committee where delegates represent member states to debate and draft policies on maritime issues such as shipping regulations, marine pollution, piracy, and global trade routes.",
+			"This council is an Intermediate level council, it will require delegates to understand international policy and maritime affairs, but remains accessible to participants with good research and public speaking skills.",
 		],
-		href: "/council/suits",
+		href: "/council/imo",
 		icon: {
-			src: "/councils/suits.png",
+			src: "/councils/imo.png",
 			alt: "United Nations Security Council Logo",
 		},
 		topics: [
-			"Grassroots to the Global Stage: Localising Solutions to Global Challenges",
+			"TBA",
 		],
 		bgs: [
 			{
 				title: "Background Guide in the works",
-				url: "#",
+				url: "TBR",
 			},
 		],
 		members: [
@@ -558,16 +558,8 @@ export const teamLinks: TeamLink[] = [
 				pos: "Member",
 				src: "/teams/placeholder.png",
 			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
+
+
 		],
 	},
 	{
@@ -586,51 +578,7 @@ export const teamLinks: TeamLink[] = [
 				pos: "Member",
 				src: "/teams/placeholder.png",
 			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
+			
 		],
 	},
 	{
@@ -649,26 +597,7 @@ export const teamLinks: TeamLink[] = [
 				pos: "Member",
 				src: "/teams/placeholder.png",
 			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
+			
 		],
 	},
 	{
@@ -687,26 +616,7 @@ export const teamLinks: TeamLink[] = [
 				pos: "Member",
 				src: "/teams/placeholder.png",
 			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
+			
 		],
 	}, 
 	{
@@ -725,11 +635,7 @@ export const teamLinks: TeamLink[] = [
 				pos: "Member",
 				src: "/teams/placeholder.png",
 			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
+			
 		],
 	},
 	{
@@ -761,16 +667,7 @@ export const teamLinks: TeamLink[] = [
 				pos: "Member",
 				src: "/teams/placeholder.png",
 			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
-			{
-				name: "TBA",
-				pos: "Member",
-				src: "/teams/placeholder.png",
-			},
+			
 		],
 	},
 	{
@@ -849,6 +746,14 @@ export const navLinks: navLink[] = [
 		showScrollToTop: true,
 		navDarkMode: true,
 		children: [
+			{
+				title: "2025",
+				href: "/gallery#2025",
+			},
+			{
+				title: "2024",
+				href: "/gallery#2024",
+			},
 			{
 				title: "2023",
 				href: "/gallery#2023",
