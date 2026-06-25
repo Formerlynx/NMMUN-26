@@ -8,13 +8,13 @@
 		"new millennium school",
 		"event"
 	],
-	"author": "Formerlynx79000 <verghes.keenalil@gmail.com>",
+	"author": "Formerlynx <verghes.keenalil@gmail.com>",
 	"engines": {
 		"node": "24.x"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Clupai8o0/nmmun.git"
+		"url": "https://github.com/Formerlynx/NMMUN-26.git"
 	},
 	"version": "1.18.4",
 	"scripts": {
