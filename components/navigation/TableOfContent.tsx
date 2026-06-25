@@ -6,6 +6,7 @@ import { BaseComponentProps, BaseLink } from "@/lib/types";
 import { animationVariants, onScrollAnimation } from "@/lib/animations";
 
 import { Heading } from "../typography";
+import Image from "next/image";
 
 interface Props extends BaseComponentProps {
 	title?: string;
@@ -34,7 +35,7 @@ const TableOfContent = ({ title, links }: Props) => {
 									delay: i * 0.1,
 								})}
 							>
-								<img
+								<Image
 									src={src}
 									alt={alt}
 									className="w-8 h-8 md:w-20 md:h-20 object-contain"
@@ -48,7 +49,7 @@ const TableOfContent = ({ title, links }: Props) => {
 									delay: i * 0.1,
 								})}
 							>
-								<img
+								<Image
 									src={src}
 									alt={alt}
 									className="w-14 h-14 md:w-16 md:h-16 object-contain"

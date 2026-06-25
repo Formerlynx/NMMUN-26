@@ -14,6 +14,7 @@ import { Button } from "@/components/navigation";
 import { BaseLayout, Container } from "@/components/layouts";
 import { Heading, List, Paragraph, SubHeading } from "@/components/typography";
 import { generateKey } from "@/lib/utils";
+import Image from "next/image";
 
 interface Props {
 	params: { id: string };
@@ -31,7 +32,7 @@ function Council({ params: { id } }: Props) {
 				setCouncil(councils[i]);
 			}
 		setCouncilNotFound(notFound);
-	}, []);
+	}, [id]);
 
 	return (
 		<BaseLayout noScrollToTop navbar={{ delay: 0 }}>
@@ -47,7 +48,7 @@ function Council({ params: { id } }: Props) {
 										delay: 1.6,
 									})}
 								>
-									<img
+									<Image
 										src={council?.icon.src}
 										alt={council?.icon.alt}
 										width={256}

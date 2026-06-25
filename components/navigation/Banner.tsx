@@ -22,7 +22,7 @@ const Banner = () => {
 		// if banner is closed, then set the banner content in local storage
 
 		if (content.length === 0) setShow(false); // Don't show empty banner
-	}, []);
+	}, [content, isEventHappening, isEventOver]);
 
 	return (
 		show && (

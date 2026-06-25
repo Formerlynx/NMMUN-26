@@ -42,6 +42,7 @@ function Hero({ className, fullScreen, image, children, scroll }: Props) {
 				)}
 				fill
 				style={{ opacity: image.opacity || 0.4 }}
+				alt=""
 			/>
 			<div
 				className={clsx(

@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { Skeleton } from "../ui/skeleton";
 
@@ -54,7 +55,7 @@ const Profiles = ({ className, team, hideTitle, animation }: Props) => {
 								})}
 								key={generateKey()}
 							>
-								<img
+								<Image
 									className="rounded-t-lg w-full mx-auto object-cover h-[400px] absolute top-0 left-0 transition-transform duration-500 group-hover:scale-110"
 									src={member.src}
 									alt={member.name}

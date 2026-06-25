@@ -1,5 +1,6 @@
 import { BaseComponentProps } from "@/lib/types";
 import clsx from "clsx";
+import Image from "next/image";
 
 interface Props extends BaseComponentProps {
 	children: React.ReactNode;
@@ -21,7 +22,7 @@ function HeroMini({
 	return (
 		<section className={clsx("w-full flex justify-center p", sectionClassName)}>
 			<div className={clsx("max-w-7xl w-full py-28 md:py-20 relative rounded-2xl overflow-hidden shadow-xl bg-black", className?.includes('bg-') && "bg-transparent")}>
-				<img
+				<Image
 					src={src}
 					alt={alt}
 					className={clsx(

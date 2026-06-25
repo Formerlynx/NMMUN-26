@@ -1,5 +1,6 @@
 import { BaseLayoutProps } from "@/lib/types";
 import clsx from "clsx";
+import Image from "next/image";
 
 interface Props extends BaseLayoutProps {
 	img: {
@@ -31,11 +32,11 @@ const ImageContainerFull = ({
 					reverse ? "left-0" : "right-0"
 				)}
 			>
-				<img src={src} alt={alt} className="w-full object-cover h-full" />
+				<Image src={src} alt={alt} className="w-full object-cover h-full" />
 			</div>
 
 			<div className="w-full md:hidden bg-black absolute top-0 left-0 h-full overflow-y-hidden z-[12]">
-				<img
+				<Image
 					src={src}
 					alt={alt}
 					className="w-full object-cover h-full"

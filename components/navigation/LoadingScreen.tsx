@@ -28,7 +28,7 @@ const LoadingScreen = () => {
 					<div className="relative flex items-center justify-center">
 						{/* GIF container */}
 						<div className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] flex items-center justify-center">
-							<img 
+							<Image 
 								src="/loading.gif" 
 								alt="Loading..." 
 								className="w-full h-full object-contain"
