@@ -25,6 +25,7 @@ function HeroMini({
 				<Image
 					src={src}
 					alt={alt}
+					fill
 					className={clsx(
 						"w-full h-full absolute object-cover top-0 left-0",
 						imgClassName

@@ -20,23 +20,21 @@ const Timer = ({ dark, animation }: Props) => {
 	const [isEventOver, setIsEventOver] = useState(false);
 
 	useEffect(() => {
-		const updateTimer = () => {
+		const updateTime = () => {
 			const time = new Time();
 
-			if (time.difference > 0) {
-				setDays(time.days);
-				setHours(time.hours);
-				setMinutes(time.minutes);
-				setSeconds(time.seconds);
-			}
+			setDays(time.days);
+			setHours(time.hours);
+			setMinutes(time.minutes);
+			setSeconds(time.seconds);
 
 			setIsEventHappening(time.isEventHappening());
 			setIsEventOver(time.isEventOver());
 		};
 
-		updateTimer();
+		updateTime();
 
-		const interval = setInterval(updateTimer, 1000);
+		const interval = setInterval(updateTime, 1000);
 
 		return () => clearInterval(interval);
 	}, []);

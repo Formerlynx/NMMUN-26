@@ -31,6 +31,7 @@ const LoadingScreen = () => {
 							<Image 
 								src="/loading.gif" 
 								alt="Loading..." 
+								fill
 								className="w-full h-full object-contain"
 								onError={(e) => {
 									// Fallback if gif is missing: simple CSS pulse

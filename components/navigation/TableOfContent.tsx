@@ -39,6 +39,7 @@ const TableOfContent = ({ title, links }: Props) => {
 									src={src}
 									alt={alt}
 									className="w-8 h-8 md:w-20 md:h-20 object-contain"
+									fill
 								/>
 								<p className="font-semibold md:text-xl">{title}</p>
 							</motion.div>

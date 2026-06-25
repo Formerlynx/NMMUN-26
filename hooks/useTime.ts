@@ -11,21 +11,22 @@ export class Time {
 	hours: number;
 	days: number;
 
+	targetTime: Date;
 	endTargetTime: Date;
 
 	constructor() {
 		const t = eventDate.split(/[- : T]/);
-		const targetTime = new Date(
+		this.targetTime = new Date(
 			parseInt(t[0]),
 			parseInt(t[1]) - 1,
 			parseInt(t[2]),
+			parseInt(t[3]),
 			parseInt(t[4]),
-			parseInt(t[5]),
-			parseInt(t[3])
+			parseInt(t[5])
 		);
 
 		this.now = new Date();
-		this.difference = targetTime.getTime() - this.now.getTime();
+		this.difference = this.targetTime.getTime() - this.now.getTime();
 
 		this.seconds = Math.floor(this.difference / 1000);
 		this.minutes = Math.floor(this.seconds / 60);
@@ -48,13 +49,14 @@ export class Time {
 	}
 
 	isEventHappening() {
-		if (this.endTargetTime.getTime() - this.now.getTime() > 0) return true;
-		else return false;
+		return (
+			this.now.getTime() >= this.targetTime.getTime() &&
+			this.now.getTime() <= this.endTargetTime.getTime()
+		);
 	}
 
 	isEventOver() {
-		if (this.endTargetTime.getTime() - this.now.getTime() <= 0) return true;
-		else return false;
+		return this.now.getTime() > this.endTargetTime.getTime();
 	}
 }
 
@@ -71,6 +73,9 @@ export const useTime = () => {
 		//? runs only on page refresh
 		const time = new Time();
 
+		setIsEventHappening(time.isEventHappening());
+		setIsEventOver(time.isEventOver());
+		
 		if (time.difference > 0) {
 			setSeconds(time.seconds);
 			setMinutes(time.minutes);
@@ -105,8 +110,7 @@ export const useTime = () => {
 			};
 		}
 
-		setIsEventHappening(time.isEventHappening());
-		setIsEventOver(time.isEventOver());
+
 	}, [days]);
 
 	return { seconds, minutes, hours, days, isEventHappening, isEventOver };

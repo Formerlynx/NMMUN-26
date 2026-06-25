@@ -62,7 +62,7 @@ export default function NavLinkMenu({ trigger, content, dark }: Props) {
 											className="flex flex-col items-center select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:shadow-md text-gray-700 hover:text-black"
 										>
 											<div className="w-8 h-8">
-												<Image {...element.img} alt="navigation icon" className="w-full h-full object-contain" />
+												<Image {...element.img} alt="navigation icon" className="w-full h-full object-contain" fill/>
 											</div>
 											<p className="line-clamp-2 text-sm leading-snug text-center truncate w-full text-gray-700 font-medium">
 												{element.title}

@@ -32,7 +32,7 @@ const ImageContainerFull = ({
 					reverse ? "left-0" : "right-0"
 				)}
 			>
-				<Image src={src} alt={alt} className="w-full object-cover h-full" />
+				<Image src={src} alt={alt} className="w-full object-cover h-full" fill/>
 			</div>
 
 			<div className="w-full md:hidden bg-black absolute top-0 left-0 h-full overflow-y-hidden z-[12]">
@@ -40,6 +40,7 @@ const ImageContainerFull = ({
 					src={src}
 					alt={alt}
 					className="w-full object-cover h-full"
+					fill
 					style={{ opacity: 0.4 }}
 				/>
 			</div>
