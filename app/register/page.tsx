@@ -102,10 +102,10 @@ function RegisterPage() {
 					</Paragraph>
 					<List
 						elements={[
-							"Ahli United Bank",
-							"IBAN: BH12AUBB00012793052001",
-							"A/C Name: New Millennium School",
-							"Required Amount: 20BD",
+							"Benefit Pay Details",
+							"Benefit Pay Details",
+							"Benefit Pay Details",
+
 						]}
 						animation={onScrollAnimation(av.FromLeft, {
 							opacity: 0.8,

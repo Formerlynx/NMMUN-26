@@ -38,8 +38,9 @@ const TableOfContent = ({ title, links }: Props) => {
 								<Image
 									src={src}
 									alt={alt}
+									width={80}
+									height={80}
 									className="w-8 h-8 md:w-20 md:h-20 object-contain"
-									fill
 								/>
 								<p className="font-semibold md:text-xl">{title}</p>
 							</motion.div>
@@ -53,6 +54,8 @@ const TableOfContent = ({ title, links }: Props) => {
 								<Image
 									src={src}
 									alt={alt}
+									width={80}
+									height={80}
 									className="w-14 h-14 md:w-16 md:h-16 object-contain"
 								/>
 
