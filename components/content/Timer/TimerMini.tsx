@@ -1,19 +1,32 @@
-import clsx from "clsx";
+"use client";
 
-import { Time } from "@/hooks/useTime";
+import clsx from "clsx";
 import { useEffect, useState } from "react";
 
-const TimerMini = ({ dark, boxClassName }: { dark?: boolean; boxClassName?: string }) => {
+import { Time } from "@/hooks/useTime";
+
+
+const TimerMini = ({
+	dark,
+	boxClassName
+}: {
+	dark?: boolean;
+	boxClassName?: string;
+}) => {
+
 	const [days, setDays] = useState(0);
 	const [hours, setHours] = useState(0);
 	const [minutes, setMinutes] = useState(0);
 	const [seconds, setSeconds] = useState(0);
- 
+
 	const [isEventHappening, setIsEventHappening] = useState(false);
 	const [isEventOver, setIsEventOver] = useState(false);
- 
+
+
 	useEffect(() => {
+
 		const updateTime = () => {
+
 			const time = new Time();
 
 			setDays(time.days);
@@ -21,135 +34,142 @@ const TimerMini = ({ dark, boxClassName }: { dark?: boolean; boxClassName?: stri
 			setMinutes(time.minutes);
 			setSeconds(time.seconds);
 
-			setIsEventHappening(time.isEventHappening());
-			setIsEventOver(time.isEventOver());
+			setIsEventHappening(
+				time.isEventHappening()
+			);
+
+			setIsEventOver(
+				time.isEventOver()
+			);
+
 		};
+
 
 		updateTime();
 
-		const interval = setInterval(updateTime, 1000);
+		const interval = setInterval(
+			updateTime,
+			1000
+		);
+
 
 		return () => clearInterval(interval);
+
+
 	}, []);
- 
+
+
+
+	if (isEventOver) return null;
+
+
+
+	if (isEventHappening) {
+
+		return (
+
+			<div
+				className={clsx(
+					"px-3 py-1.5 rounded-full text-xs font-semibold",
+					dark
+						? "bg-white/10 text-white"
+						: "bg-black/5",
+					boxClassName
+				)}
+			>
+				Event Live
+			</div>
+
+		);
+
+	}
+
+
+
+	const boxes = [
+		{
+			value: days,
+			label: "D"
+		},
+		{
+			value: hours,
+			label: "H"
+		},
+		{
+			value: minutes,
+			label: "M"
+		},
+		{
+			value: seconds,
+			label: "S"
+		}
+	];
+
+
+
 	return (
-		<div className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max relative z-10">
-			{!isEventOver && (
-				<>
-					{!isEventHappening ? (
-						<>
-							<div
-								className={clsx(
-									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white/10",
-									boxClassName
-								)}
-							>
-								<span
-									className={clsx(
-										"font-mono text-lg font-medium",
-										dark && "text-white"
-									)}
-								>
-									<span>{days < 10 ? `0${days}` : days}</span>
-								</span>
-								<span
-									className={clsx(
-										"text-[10px] uppercase opacity-60 font-medium",
-										dark && "text-white"
-									)}
-								>
-									days
-								</span>
-							</div>
-							<div
-								className={clsx(
-									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white/10",
-									boxClassName
-								)}
-							>
-								<span
-									className={clsx(
-										"font-mono text-lg font-medium",
-										dark && "text-white"
-									)}
-								>
-									<span>{hours < 10 ? `0${hours}` : hours}</span>
-								</span>
-								<span
-									className={clsx(
-										"text-[10px] uppercase opacity-60 font-medium",
-										dark && "text-white"
-									)}
-								>
-									hours
-								</span>
-							</div>
-							<div
-								className={clsx(
-									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white/10",
-									boxClassName
-								)}
-							>
-								<span
-									className={clsx(
-										"font-mono text-lg font-medium",
-										dark && "text-white"
-									)}
-								>
-									<span>{minutes < 10 ? `0${minutes}` : minutes}</span>
-								</span>
-								<span
-									className={clsx(
-										"text-[10px] uppercase opacity-60 font-medium",
-										dark && "text-white"
-									)}
-								>
-									min
-								</span>
-							</div>
-							<div
-								className={clsx(
-									"flex flex-col p-2 bg-black bg-opacity-5 rounded-xl",
-									dark && "bg-white/10",
-									boxClassName
-								)}
-							>
-								<span
-									className={clsx(
-										"font-mono text-lg font-medium",
-										dark && "text-white"
-									)}
-								>
-									<span>{seconds < 10 ? `0${seconds}` : seconds}</span>
-								</span>
-								<span
-									className={clsx(
-										"text-[10px] uppercase opacity-60 font-medium",
-										dark && "text-white"
-									)}
-								>
-									sec
-								</span>
-							</div>
-						</>
-					) : (
-						<div
-							className={clsx(
-								"flex py-2 px-4 bg-black bg-opacity-5 rounded-xl",
-								dark && "bg-white/10 text-white",
-								boxClassName
-							)}
-						>
-							The event has started!!
-						</div>
+
+		<div className="flex items-center gap-1.5">
+
+
+			{boxes.map((item) => (
+
+				<div
+
+					key={item.label}
+
+					className={clsx(
+
+						"flex items-center gap-1",
+
+						"px-2.5 py-1.5",
+
+						"rounded-full",
+
+						"bg-black/5",
+
+						dark && "bg-white/10 text-white",
+
+						boxClassName
+
 					)}
-				</>
-			)}
+
+				>
+
+					<span className="
+						font-mono
+						text-sm
+						font-semibold
+					">
+
+						{item.value < 10
+							? `0${item.value}`
+							: item.value}
+
+					</span>
+
+
+					<span className="
+						text-sm
+						uppercase
+						opacity-80
+					">
+
+						{item.label}
+
+					</span>
+
+
+				</div>
+
+			))}
+
+
 		</div>
+
 	);
+
 };
+
 
 export default TimerMini;

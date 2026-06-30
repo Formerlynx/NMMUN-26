@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useState } from "react";
+import clsx from "clsx";
 
 import { navLinks } from "@/lib/links";
 import { generateKey } from "@/lib/utils";
@@ -9,94 +13,261 @@ import { useTime } from "@/hooks/useTime";
 
 import { Button, Logo, NavLink, NavLinkMenu, Sidebar } from ".";
 import { TimerMini } from "../content";
-import clsx from "clsx";
+
 
 interface Props {
 	dark?: boolean;
 	delay?: number;
 }
 
+
 const Navbar = ({ delay, dark }: Props) => {
+
 	const { isEventHappening, isEventOver } = useTime();
 
+	const [scrolled, setScrolled] = useState(false);
+
+
+	const { scrollY } = useScroll();
+
+
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		setScrolled(latest > 80);
+	});
+
+
 	return (
+
 		<motion.nav
+
 			className={clsx(
-				"p py-4 w-full flex justify-center absolute top-0 left-0 z-[40]",
+				"fixed top-5 left-0 w-full z-[50] flex justify-center px-4",
+
 				dark && "text-white"
 			)}
+
 			variants={animationVariants}
+
 			{...animation("fromTop", {
 				delay
 			})}
+
+
+			whileInView={{
+				scale: scrolled ? 0.97 : 1
+			}}
+
+			transition={{
+				duration:0.3
+			}}
+
 		>
-			<div className="w-full max-w-7xl flex justify-between items-center gap-6 xl:gap-10">
+
+
+			<div
+
+				className={clsx(
+
+					"w-full max-w-8xl",
+
+					"flex justify-between items-center",
+
+					"gap-6 xl:gap-10",
+
+					"rounded-3xl",
+
+					"px-6 py-3",
+
+					"border",
+
+					"transition-all duration-300",
+
+
+					scrolled
+
+					?
+
+					"bg-white/85 backdrop-blur-xl shadow-xl border-black/5"
+
+					:
+
+					"bg-white/40 backdrop-blur-md border-white/20"
+
+				)}
+
+			>
+
+
 				{/* LOGO + COUNTDOWN */}
-				<div className="flex gap-4 xl:gap-6 items-center flex-shrink-0">
+
+				<div className="flex gap-5 items-center flex-shrink-0">
+
+
 					<Link href="/">
-						<Logo w={60} h={60} />
+
+						<Logo w={55} h={55}/>
+
 					</Link>
-					<TimerMini dark={dark} />
-				</div>
- 
-				{/* LINKS - Desktop */}
-				<div className="hidden xl:flex items-center">
-					<ul
-						className={clsx(
-							"flex gap-4 xl:gap-6 items-center",
-							dark && "text-white"
-						)}
+
+
+
+					<div
+
+					className="
+					flex
+					items-center
+					rounded-full
+					bg-[#F8F3E8]
+					border
+					border-[#B8863B]/20
+					px-3
+					py-1.5
+					text-xs
+					font-bold
+					text-[#A67C2D]
+					"
+
 					>
-						{navLinks.map((link) => {
-							if (link.button) {
-								return (
-									<li key={generateKey()}>
-										<Button
-											href={link.href}
-											animation
-											dark={dark}
-											disabled={isEventOver || isEventHappening}
-										>
-											{link.title}
-										</Button>
-									</li>
-								);
-							} else if (link.menu) {
-								return (
-									<li key={generateKey()}>
-										<NavLinkMenu
-											trigger={{
-												...link,
-											}}
-											content={link.children.map((child) => ({
-												title: child.title,
-												href: child.href,
-												img: {
-													src: child.icon.src,
-													alt: child.icon.alt,
-												},
-											}))}
-											dark={dark}
-										/>
-									</li>
-								);
-							} else {
-								return (
-									<li key={generateKey()}>
-										<NavLink href={link.href} animation dark={dark}>
-											{link.title}
-										</NavLink>
-									</li>
-								);
-							}
-						})}
-					</ul>
+
+						<TimerMini />
+
+					</div>
+
+
 				</div>
 
-				<Sidebar dark={dark} />
+
+
+
+				{/* DESKTOP LINKS */}
+
+				<div className="hidden xl:flex items-center">
+
+
+					<ul className="flex gap-6 items-center">
+
+
+					{navLinks.map((link)=>{
+
+
+						if(link.button){
+
+							return (
+
+								<li key={generateKey()}>
+
+									<Button
+
+										href={link.href}
+
+										animation
+
+										dark
+
+										disabled={
+											isEventOver ||
+											isEventHappening
+										}
+
+									>
+
+										{link.title} →
+
+									</Button>
+
+								</li>
+
+							)
+
+						}
+
+
+
+						if(link.menu){
+
+							return (
+
+								<li key={generateKey()}>
+
+									<NavLinkMenu
+
+										trigger={{
+											...link
+										}}
+
+										content={
+											link.children.map(child=>({
+
+												title:child.title,
+
+												href:child.href,
+
+												img:{
+													src:child.icon.src,
+													alt:child.icon.alt
+												}
+
+											}))
+										}
+
+										dark={dark}
+
+									/>
+
+								</li>
+
+							)
+
+						}
+
+
+
+						return (
+
+							<li key={generateKey()}>
+
+								<NavLink
+
+								href={link.href}
+
+								animation
+
+								dark={dark}
+
+								>
+
+									{link.title}
+
+								</NavLink>
+
+
+							</li>
+
+						)
+
+
+					})}
+
+
+					</ul>
+
+
+				</div>
+
+
+
+
+				<Sidebar dark={dark}/>
+
+
 			</div>
+
+
 		</motion.nav>
-	);
-};
+
+	)
+
+}
+
 
 export default Navbar;

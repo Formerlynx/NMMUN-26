@@ -2,7 +2,6 @@ import AnimationWrapper from "./AnimationWrapper";
 import Banner from "./Banner";
 import Button from "./Button";
 import CTA from "./CTA";
-import FloatingNavbar from "./FloatingNavbar";
 import FloatingScrollToTopButton from "./FloatingScrollToTopButton";
 import Footer from "./Footer";
 import LoadingScreen from "./LoadingScreen";
@@ -19,7 +18,6 @@ export {
 	Banner,
 	Button,
 	CTA,
-	FloatingNavbar,
 	FloatingScrollToTopButton,
 	Footer,
 	Logo,
