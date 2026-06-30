@@ -55,10 +55,11 @@ const Profiles = ({ className, team, hideTitle, animation }: Props) => {
 								})}
 								key={generateKey()}
 							>
-								<Image
+								<img
 									className="rounded-t-lg w-full mx-auto object-cover h-[400px] absolute top-0 left-0 transition-transform duration-500 group-hover:scale-110"
 									src={member.src}
 									alt={member.name}
+									
 								/>
 
 								<div className="absolute bottom-0 w-full h-36 bg-gradient-to-t from-[#050517] via-[#050517]/60 to-transparent"></div>
