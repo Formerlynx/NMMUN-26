@@ -3,7 +3,7 @@
 import { teamLinks } from "@/lib/links";
 import { generateKey } from "@/lib/utils";
 import { animation, onScrollAnimation } from "@/lib/animations";
-
+import { AnimationVariants as av } from "@/lib/types";
 import { Paragraph, Title } from "@/components/typography";
 import { BaseLayout, Container } from "@/components/layouts";
 import { CTA, TableOfContent } from "@/components/navigation";
@@ -58,18 +58,19 @@ function TeamPage() {
 				image={{
 					src: "/hero/hero-mini.jpeg",
 					alt: "whatever",
-					opacity: 0.6,
-				}}
-				className="text-white"
+					opacity: 1,
+			}}
+			sectionClassName="bg-white py-10"
+			className="text-white bg-transparent"
 			>
-				<Title small animation={onScrollAnimation("fromDown")} center>
+				<Title small animation={onScrollAnimation(av.FromDown)} center>
 					SECURE YOUR SPOT
 				</Title>
-				<Paragraph animation={onScrollAnimation("fromDown")} center>
+				<Paragraph animation={onScrollAnimation(av.FromDown)} center>
 					Ready to start your diplomatic journey?
 				</Paragraph>
-				<Timer dark animation={onScrollAnimation("fromDown")} />
-				<CTA animation={onScrollAnimation("fromDown")} />
+				<Timer dark animation={onScrollAnimation(av.FromDown)} />
+				<CTA animation={onScrollAnimation(av.FromDown)} />
 			</HeroMini>
 		</BaseLayout>
 	);

@@ -83,7 +83,7 @@
 		transition: color 0.3s ease;
 	}
 	a:visited {
-		color: #374151;
+		color: #d1d5db;
 	}
 	.text-white a, .dark a, a.text-light {
 		color: #d1d5db !important;

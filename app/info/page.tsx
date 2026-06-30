@@ -287,9 +287,9 @@ function InfoPage() {
 				image={{
 					src: "/hero/hero-mini.jpeg",
 					alt: "whatever",
-					opacity: 0.6,
+					opacity: 1,
 			}}
-			sectionClassName="bg-[#050517] py-10"
+			sectionClassName="bg-white py-10"
 			className="text-white bg-transparent"
 			>
 				<Title small animation={onScrollAnimation(av.FromDown)} center>

@@ -221,12 +221,12 @@ export default function Home() {
 			<Container
 				center
 				id="faq"
-				background={<Background color="bg-[#050517]" />}
-				className="text-white"
+				background={<Background color="bg-white" />}
+				className="text-black"
 			>
 				<Details>
 					<Heading
-						className="mb-6 !text-white"
+						className="mb-6 !text-black"
 						animation={onScrollAnimation(AnimationVariants.FromDown)}
 					>
 						FAQs
@@ -235,25 +235,25 @@ export default function Home() {
 						question="Is there a registration fee?"
 						answer="Yes, there is a registration fee of 20BHD for all delegates and chairs."
 						animation={onScrollAnimation(AnimationVariants.FromDown)}
-						className="text-white"
+						className="text-black"
 					/>
 					<FAQ
 						question="Will food be provided on the day of the conference?"
 						answer="We will provide breakfast, lunch, and snacks on the days of the conference."
 						animation={onScrollAnimation(AnimationVariants.FromDown)}
-						className="text-white"
+						className="text-black"
 					/>
 					<FAQ
 						question="Can I sign up if I know nothing about MUNs?"
 						answer="Yes you can! We will provide all delegates with training sessions and our team will always be available to assist you."
 						animation={onScrollAnimation(AnimationVariants.FromDown)}
-						className="text-white"
+						className="text-black"
 					/>
 					<FAQ
 						question="How do I submit the fees?"
 						answer="Information regarding registering and submitting the fees is given in detail in the register page"
 						animation={onScrollAnimation(AnimationVariants.FromDown)}
-						className="text-white"
+						className="text-black"
 					/>
 				</Details>
 			</Container>
@@ -262,10 +262,10 @@ export default function Home() {
 				image={{
 					src: "/hero/hero-mini.jpeg",
 					alt: "whatever",
-					opacity: 0.5,
+					opacity: 1,
 				}}
-				sectionClassName="bg-[#050517] py-10"
-				className="text-white bg-transparent"
+				sectionClassName="bg-white py-10"
+				className="text-white"
 			>
 				<Title
 					small

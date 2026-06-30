@@ -82,8 +82,9 @@ function GalleryPage() {
 				image={{
 					src: "/hero/hero-mini.jpeg",
 					alt: "whatever",
-					opacity: 0.6,
+					opacity: 1,
 				}}
+				sectionClassName="bg-white py-10"
 				className="text-white"
 			>
 				<Title small animation={onScrollAnimation("fromDown")} center>
