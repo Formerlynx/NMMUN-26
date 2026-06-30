@@ -126,7 +126,7 @@ export default function Home() {
 						className="mb-6 xl:w-3/4"
 						animation={onScrollAnimation(AnimationVariants.FromLeft)}
 					>
-						ALEA IACTA EST: <br/>"The Die is Cast"
+						ALEA IACTA EST: <br/> &quot;The Die is Cast&quot;
 					</Heading>
 
 					<Paragraph
@@ -134,9 +134,9 @@ export default function Home() {
 							opacity: 0.8,
 						})}
 					>
-						The world stands at a defining crossroads. Across every continent, nations are confronted by choices whose consequences will echo for generations to come. From shifting geopolitical alliances and accelerating technological revolutions to climate tipping points, economic uncertainty, and the growing race for influence beyond Earth, the decisions made today are no longer temporary responses—they are the foundations of tomorrow's world order.<br/>
+						The world stands at a defining crossroads. Across every continent, nations are confronted by choices whose consequences will echo for generations to come. From shifting geopolitical alliances and accelerating technological revolutions to climate tipping points, economic uncertainty, and the growing race for influence beyond Earth, the decisions made today are no longer temporary responses—they are the foundations of tomorro&apos;s world order.<br/>
 
-						<br/>"Alea Iacta Est," the famous declaration attributed to Julius Caesar as he crossed the Rubicon, signifies the moment when hesitation ends and commitment begins. Once the die is cast, there is no turning back. Likewise, the international community now faces an era where every diplomatic negotiation, legislative reform, economic policy, humanitarian intervention, and strategic decision carries irreversible consequences. The question is no longer whether change will come, but who will shape it and at what cost.<br/>
+						<br/>&quot;Alea Iacta Est,&quot; the famous declaration attributed to Julius Caesar as he crossed the Rubicon, signifies the moment when hesitation ends and commitment begins. Once the die is cast, there is no turning back. Likewise, the international community now faces an era where every diplomatic negotiation, legislative reform, economic policy, humanitarian intervention, and strategic decision carries irreversible consequences. The question is no longer whether change will come, but who will shape it and at what cost.<br/>
 
 					</Paragraph>
 				</Details>
