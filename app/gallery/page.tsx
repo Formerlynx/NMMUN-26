@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import {
 	Hero,
 	HeroMini,
@@ -12,7 +10,7 @@ import {
 } from "@/components/content";
 import { CTA } from "@/components/navigation";
 import { Paragraph, Title } from "@/components/typography";
-import { Background, BaseLayout, Container } from "@/components/layouts";
+import { BaseLayout, Container } from "@/components/layouts";
 import { animation, onScrollAnimation } from "@/lib/animations";
 
 function GalleryPage() {
@@ -48,35 +46,45 @@ function GalleryPage() {
 				/>
 			</Hero>
 
-			<Container 
-				className="flex flex-col items-center justify-center py-40"
-				background={<Background color="bg-[#FCF5E5]" />}
-			>
-				<motion.div
-					initial={{ opacity: 0, scale: 0.9 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 0.8 }}
-					className="text-center"
-				>
-					<h2 className="text-5xl font-serif text-[#050517] mb-4">Gallery - Coming Soon</h2>
-					<div className="w-24 h-1 bg-[#ED561F] mx-auto mb-8"></div>
-					<p className="text-gray-600 max-w-md mx-auto">
-						Our visual journey is being curated. Stay tuned for glimpses of 
-						diplomacy, leadership, and memorable moments from NMMUN 2026.
-					</p>
-				</motion.div>
+			<Container>
+				<TimelineContainer>
+					<Timeline time={{ date: "More coming soon..." }} start />
+					<Timeline time={{ date: "November, 2023" }}>
+						<Masonry
+							title="NMMUN 2023"
+							dir="23-24"
+							href="https://docs.google.com/document/d/1gkwsk8HJ_FiIcI_6SLQyrQ_IvCCqK58mw-pbqx_PwXE/edit?usp=sharing"
+							gridMatrix={[
+								[1, 2, 3, 4, 5, 6, 7],
+								[8, 9, 10, 11, 12, 13, 14],
+								[15, 16, 17, 18, 19, 20],
+							]}
+						/>
+					</Timeline>
+					<Timeline time={{ date: "October, 2022" }}>
+						<Masonry
+							title="NMMUN 2022"
+							dir="22-23"
+							href="https://drive.google.com/drive/folders/1zcQiauT-H2_NVyGsMeabcbmCWRI6QTg4?usp=sharing"
+							gridMatrix={[
+								[1, 2, 3, 4, 5, 6, 7],
+								[8, 9, 10, 11, 12, 13, 14],
+								[15, 16, 17, 18, 19, 20],
+							]}
+						/>
+					</Timeline>
+				</TimelineContainer>
 			</Container>
 
 			<div className="my-20"></div>
 
 			<HeroMini
-    			image={{
-	        		src: "...",
-		    	    alt: "...",
-			        opacity: 0.6,
+				image={{
+					src: "/hero/hero-mini.jpeg",
+					alt: "whatever",
+					opacity: 0.6,
 				}}
-	    		sectionClassName="bg-[#050517] py-10"
-			    className="text-white bg-transparent"
+				className="text-white"
 			>
 				<Title small animation={onScrollAnimation("fromDown")} center>
 					SECURE YOUR SPOT

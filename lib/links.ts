@@ -747,20 +747,12 @@ export const navLinks: navLink[] = [
 		navDarkMode: true,
 		children: [
 			{
-				title: "2025",
-				href: "/gallery#2025",
-			},
-			{
-				title: "2024",
-				href: "/gallery#2024",
-			},
-			{
 				title: "2023",
-				href: "/gallery#2023",
+				href: "/https://docs.google.com/document/d/1gkwsk8HJ_FiIcI_6SLQyrQ_IvCCqK58mw-pbqx_PwXE/edit?usp=sharing",
 			},
 			{
 				title: "2022",
-				href: "/gallery#2022",
+				href: "/https://drive.google.com/drive/folders/1zcQiauT-H2_NVyGsMeabcbmCWRI6QTg4?usp=sharing",
 			},
 		],
 	},
